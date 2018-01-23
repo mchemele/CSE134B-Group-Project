@@ -1,0 +1,48 @@
+<form>
+	<div>
+		<div class="login-text label">First Name: </div>
+		<input type="text" name="name">
+		<div class="login-text label">Last Name: </div>
+		<input type="text" name="last-name">
+		<div class="login-text label">Email: </div>
+		<input type="text" name="email">
+		<div class="login-text label">Password: </div>
+		<input type="password" name="passwd">
+		<form action="">
+			<label for="Student" class="login-text label">I'm a student</label>
+			<input type="radio" id="Student" value="Student" name="type"><br clear="all">
+			<label for="Teacher" class="login-text label">I'm a teacher</label>
+			<input type="radio" id="Teacher" value="Teacher" name="type"><br clear="all">
+			<label for="Parent" class="login-text label">I'm a parent</label>
+			<input type="radio" id="Parent" value="Parent" name="type"><br clear="all">
+		</form>
+		<div id="add">
+		</div>
+		<input type="submit" value="Sign me up!">
+	</div>
+</form>
+<script>
+	$(document).ready(function(){
+		$("#Student").click(function(){
+			$("#add").html("\
+				<div class='login-text label'>Parent Name: </div>\
+				<input type='text' name='name'>\
+				<div class='login-text label'>Desired Grade: </div>\
+				<input type='text' name='name'>\
+				<div class='login-text label'>ID# </div>\
+				<input type='text' name='name'>\
+			")
+		});		
+		$("#Parent").click(function(){
+			$("#add").html("\
+				<div class='login-text label'>Student Name: </div>\
+				<input type='text' name='name'>\
+				<div class='login-text label'>Student ID# </div>\
+				<input type='text' name='name'>\
+			")
+		});
+		$("#Teacher").click(function(){
+			$("#add").html("<br>");
+		});
+	})
+</script>
