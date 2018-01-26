@@ -20,6 +20,13 @@
                 <div class="login-text label">Password: </div>
                 <input type="password" name="passwd">
                 <input type="submit" value="Login">
+                
+                <select id="loginAs" onchange="location = this.value;">
+                <option value="login">LOGIN as:</option>
+                <option value="home.html">Student</option>
+                <option value="#">Parent</option>
+                <option value="#">Teacher</option>
+                </select>
             </div>
         </form>
         <div id="register-container">
