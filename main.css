@@ -230,6 +230,13 @@ input {
   margin-right: 10%;
 }
 
+#grade-scroll {
+  overflow-x: scroll;
+  height: 100%;
+  width: 65vw;
+  display: block;
+}
+
 #names p {
   font-weight: bold;
 }
