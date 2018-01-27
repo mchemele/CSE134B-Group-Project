@@ -163,3 +163,67 @@ tr:hover {
   background-color: rgba(255,155,100, 0.5);
   cursor: pointer;
 }
+
+.chat-container {
+  width: 85%;
+  padding-top: 10%;
+  padding-left: 2%;
+}
+
+form, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+input {
+  font: 12px arial;
+}
+
+#wrapper, #loginform {
+  margin: 0 auto;
+  padding-bottom: 25px;
+  background: #e7893e;
+  width: 504px;
+  border: 1px solid #acd8f0;
+  float: left;
+}
+
+#chatbox {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  padding: 10px;
+  background: #fff;
+  height: 170px;
+  width: 430px;
+  border: 1px solid #acd8f0;
+  overflow: auto;
+}
+
+#menu {
+  padding: 12.5px 25px 12.5px 25px;
+}
+
+.welcome {
+  float: left;
+}
+
+.logout {
+  float: right;
+}
+
+#usermsg {
+  margin-left: 5%;
+}
+
+#names {
+  overflow-y: scroll;
+  height: 300px;
+  display: block;
+  width: 20%;
+  float: left;
+  margin-right: 10%;
+}
+
+#names p {
+  font-weight: bold;
+}
