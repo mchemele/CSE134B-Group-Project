@@ -118,10 +118,14 @@ input:focus {
   margin: 0 auto;
   padding-bottom: 20%;
 }
-.message-container {
+.message-container, .m-message-container {
   width: 50%;
   margin: 0 auto;
   padding-top: 15%;
+}
+
+.m-message-container {
+  padding-right: 40%;
 }
 
 .message {
