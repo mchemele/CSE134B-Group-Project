@@ -116,15 +116,12 @@ input:focus {
   width: 75%;
   height: 100%;
   margin: 0 auto;
+  padding-bottom: 20%;
 }
-.message-container, .roster-container {
+.message-container {
   width: 50%;
   margin: 0 auto;
   padding-top: 15%;
-}
-
-.roster-container {
-  height: 100%;
 }
 
 .message {
