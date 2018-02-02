@@ -6,27 +6,41 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="login.js"></script>
+	<meta name="viewport" content="width=device-width"; initial-scale=1; maximum-scale=1">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>iMPROVE!</title>
 </head>
 
 <body>
-	<div id="navbar">
-		<a href="index.html"><span class="logo">iMPROVE!</span></a>
-		<ul>
-			<li class="selected">HOME</li>
-			<li><a href="practice.html">PRACTICE</a></li>
-			<li><a href="assignments.html">ASSIGNMENTS</a></li>
-			<li><a href="student_forum.html">FORUM</a></li>
-			<li><a href="student_chat.html">CONTACT</a></li>
-			<li><a href="grades.html">GRADES</a></li>
-		</ul>
-	</div>
+     
+<!--	<div id="navbar"> -->
+       <nav>
+	       <a href="index.html"><span class="logo">iMPROVE!</span></a>
+          <div class="toggle"><i class="fa fa-bars menu" aria-hidden="true"></i></div>
+          <ul>
+	     <li class="selected">HOME</li>
+	     <li><a href="practice.html">PRACTICE</a></li>
+	     <li><a href="assignments.html">ASSIGNMENTS</a></li>
+	     <li><a href="student_forum.html">FORUM</a></li>
+	     <li><a href="student_chat.html">CONTACT</a></li>
+	     <li><a href="grades.html">GRADES</a></li>
+         </ul>
+		<!--	</div>-->
+	</nav>
 	<div id="container">
 		<div class="message-container">
 			<div class="message">Hello, StudentName!<br><span class="sub">Here is your current progress:</span></div>
 			<div class="grade">B+</div><div class="progress"><div class="fill"></div></div>
 		</div>
 	</div>
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+           $(document).ready(function() {
+		$('.menu').click(function() {
+		    $('ul').toggleClass('active');	
+		})
+            })
+	</script> 
 </body>
 
 </html>
