@@ -271,3 +271,21 @@ input {
 #names p {
   font-weight: bold;
 }
+
+.left, .inside-left {
+  text-align: left;
+  width: 55%;
+}
+
+.right {
+  text-align: right;
+}
+
+.inside-left h1 {
+  font-size: 10px;
+}
+
+.inside-right h1 {
+  text-align: right;
+  font-size: 11px;
+}
