@@ -361,3 +361,7 @@ nav .selected {
   }
 }
 
+#table-upper tr {
+  border: 2px;
+}
+
