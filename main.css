@@ -126,7 +126,7 @@ input:focus {
   #navbar li {
     display: inline-block;
     margin-right: -4px;
-    padding-bottom: 5px;i
+    padding-bottom: 5px;
   } 
 }
 
@@ -346,7 +346,7 @@ nav .selected {
   }
    nav ul {
      width: 100%;
-    // display: none; --> THIS ALLOWS JAVASCRIPT to TOGGLE MENU
+    /* display: none; --> THIS ALLOWS JAVASCRIPT to TOGGLE MENU*/
    }
    nav ul li {
      display: block;
