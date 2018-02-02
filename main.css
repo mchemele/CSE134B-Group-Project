@@ -126,8 +126,7 @@ input:focus {
   #navbar li {
     display: inline-block;
     margin-right: -4px;
-    padding-bottom: 5px;
-
+    padding-bottom: 5px;i
   } 
 }
 
@@ -302,11 +301,11 @@ nav .logo {
   width: 100px;
   float:left;
   padding: 10px;
-  padding-right: 50px;
+  padding-right: 40px;
 }
 
 nav ul {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding: 0;
 }
@@ -355,6 +354,10 @@ nav .selected {
    } 
   .active {
     display: block;
+  }
+
+  .chat-container, #names, #wrapper, #menu, .welcome, .logout, #chatbox, #usermsg, #submitmsg {
+    width: 95%;
   }
 }
 
