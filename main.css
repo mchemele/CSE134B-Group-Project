@@ -151,7 +151,7 @@ input:focus {
 .message {
   font-size: 24pt;
 }
-.progress {
+/*.progress {
   background-color: rgba(255,255,255,0.5);
   height: 35px;
   border: 2px solid #666;
@@ -162,7 +162,59 @@ input:focus {
   background-color: chartreuse;
   width: 70%;
   height: 35px;
+}*/
+
+.progressBar {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background: #eee;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #222;
 }
+
+.title {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  padding-left: 10px;
+  float: left;
+  font-weight: bold;
+  color: #fff;
+  line-height: 2.5;
+  z-index: 10000;
+  border-top-left-radius: 5px;
+  border-top-left-radius: 5px;
+  box-shadow: 2px 0 2px #333;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.progress_value {
+  position: relative;
+  float: right;
+  padding-right: 10px;
+  line-height: 2.5;
+  font-weight: bold;
+  color: #455a64;
+  z-index: 10000;
+}
+
+.progress {
+  height: 40px;
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 2px 0 2px #555;
+}
+
+.barColor {
+  background: darkgreen;
+}
+
+.progress_bar {
+  background-color: #ff6f00;
+}
+
 .sub {
   font-size: 16pt;
 }

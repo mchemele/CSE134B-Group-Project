@@ -1,7 +1,6 @@
 
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
@@ -27,17 +26,27 @@
 	<div id="container">
 		<div class="message-container">
 			<div class="message">Hello, Parent Name!<br><span class="sub">Here is the current progress of Child Name:</span></div>
-			<div class="grade">B+</div><div class="progress"><div class="fill"></div></div>
+			<!--<div class="grade">B+</div><div class="progress"><div class="fill"></div></div>-->
+			<div class="progressBar">
+				<div class="title barColor">Progress</div>
+				<div class="progress progress_bar"></div>
+				<div class="progress_value">85%</div>
+			</div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type="text/javascript">
-        $(document).ready(function() {
+    <script type="text/javascript">
+      // menu toggle
+       $(document).ready(function() {
 		  $('.menu').click(function() {
-		    $('ul').toggleClass('active');	
-		  })
-        })
-	</script>
+		     $('ul').toggleClass('active');	
+		   })
+        });
+       
+       // progress bar
+        $(document).ready(function() {
+		   $('.progress_bar').animate({width:'85%'}, 1000);
+		});
+	</script> 
 </body>
 
 </html>
