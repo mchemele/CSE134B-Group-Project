@@ -417,3 +417,13 @@ nav .selected {
   border: 2px;
 }
 
+.inside-message-container {
+   font-weight: bold;
+   font-size: 14px;
+}
+
+input {
+    width: 40%;
+    box-sizing: border-box;
+    display: block;
+}

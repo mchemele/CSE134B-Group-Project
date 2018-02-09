@@ -25,59 +25,66 @@
 	</nav>
 	<div id="container">
 		<div class="message-container">
-			<h2>Assignments</h2>
-                        <p>Choose file to attach:</p><input name="myFile" type="file">
-                        Title<input type="text" name="title" value="Enter title">
-                        <input type="submit" value="Submit"><br />
-                        
-			<p></p>
-                             <table>
+			 <h2>Assignments</h2>
+			<div class="inside-message-container">
+			   Date:    <input type="date" name="aDate" id="aDate" /><br/>
+			   Concept: <input type="text" name="aConcept" id="aConcept" /><br/>
+			   File:    <input type="file" name="attach" id="aFile" /><br />
+			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+		    </div>
+            <table>
 				<tr>
-					<td>Date</td>
-					<td>Concept</td>
-					<td>Delete?</td>
-                                        <td>Update?</td>
+					<th>Date</th>
+					<th>Concept</th>
+					<th>Worksheet</th>
 				</tr>
 				<tr>
-					<td>2/09/17</td>
+					<td>2018-02-09</td>
 					<td>Functions</td>
-					<td>Delete</td>
-                                        <td>Update</td>
+					<td>Attachment 1</td>
 				</tr>
 				<tr>
-					<td>2/20/17</td>
+					<td>2018-01-09</td>
 					<td>Trigonometry</td>
-					<td>Delete</td>
-                                        <td>Update</td>
+					<td>Attachment 2</td>
 				</tr>
 				<tr>
-					<td>3/10/17</td>
+					<td>2018-01-09</td>
 					<td>Solve for X</td>
-					<td>Delete</td>
-                                        <td>Update</td>
-				</tr>
-				<tr>
-					<td>4/01/17</td>
-					<td>Quadratic Formula</td>
-					<td>Delete</td>
-                                        <td>Update</td>
-				</tr>
-				<tr>
-					<td>5/01/17</td>
-					<td>Pythagorus</td>
-					<td>Delete</td>
-                                        <td>Update</td>
+					<td>Attachment 3</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script type="text/javascript">
         $(document).ready(function() {
 		  $('.menu').click(function() {
 		    $('ul').toggleClass('active');	
 		  })
-        })
+        });
+
+        function addRow() {
+        	var aDate = document.getElementById('aDate').value;
+        	var aConcept = document.getElementById('aConcept').value;
+        	var aFile = document.getElementById('aFile').value;
+
+        	var table = document.getElementsByTagName('table')[0];
+
+        	if (aDate=="" || aConcept=="" || aFile=="") {
+              alert("Please Fill All Required Fields");
+              return false;
+            }
+
+        	var newRow = table.insertRow(1);
+
+        	var cell1 = newRow.insertCell(0);
+        	var cell2 = newRow.insertCell(1);
+        	var cell3 = newRow.insertCell(2);
+
+        	cell1.innerHTML = aDate;
+        	cell2.innerHTML = aConcept;
+        	cell3.innerHTML = aFile;
+        }
 	</script>
 </body>
 
