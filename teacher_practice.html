@@ -27,56 +27,61 @@
 	<div id="container">
 		<div class="message-container">
 			<h2>Extra Practice</h2>
-                        <p>Choose file to attach:</p><input name="myFile" type="file">
-                        Title<input type="text" name="title" value="Enter title">
-		        <input type="submit" value="Submit"><br />
-                             <table>
+            <div class="inside-message-container">
+               Worksheet: <input type="text" name="aWorksheet" id="aWorksheet" /><br />
+			   Concept: <input type="text" name="aConcept" id="aConcept" /><br/>
+			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+		    </div>
+            <table>
 				<tr>
-					<td>Worksheet</td>
-					<td>Concept</td>
-					<td>Delete?</td>
-                                        <td>Update?</td>
+					<th>Worksheet</th>
+					<th>Concept</th>
 				</tr>
 				<tr>
 					<td>Practice #1</td>
 					<td>Functions</td>
-					<td>Delete</td>
-                                        <td>Update</td>
 				</tr>
 				<tr>
 					<td>Practice #2</td>
 					<td>Trigonometry</td>
-					<td>Delete</td>
-                                        <td>Update</td>
 				</tr>
 				<tr>
 					<td>Practice #3</td>
 					<td>Solve for X</td>
-					<td>Delete</td>
-                                        <td>Update</td>
 				</tr>
 				<tr>
 					<td>Practice #4</td>
 					<td>Quadratic Formula</td>
-					<td>Delete</td>
-                                        <td>Update</td>
-				</tr>
-				<tr>
-					<td>Practice #5</td>
-					<td>Pythagorus</td>
-					<td>Delete</td>
-                                        <td>Update</td>
 				</tr>
 			</table>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 	<script type="text/javascript">
         $(document).ready(function() {
 		  $('.menu').click(function() {
 		    $('ul').toggleClass('active');	
 		  })
-        })
+        });
+
+         function addRow() {
+        	var aConcept = document.getElementById('aConcept').value;
+        	var aWorksheet = document.getElementById('aWorksheet').value;
+
+        	var table = document.getElementsByTagName('table')[0];
+
+        	if (aConcept=="" || aWorksheet=="") {
+              alert("Please Fill All Required Fields");
+              return false;
+            }
+
+        	var newRow = table.insertRow(1);
+
+        	var cell1 = newRow.insertCell(0);
+        	var cell2 = newRow.insertCell(1);
+
+        	cell1.innerHTML = aWorksheet;
+        	cell2.innerHTML = aConcept;
+        }
 	</script>
 </body>
 

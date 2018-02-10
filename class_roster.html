@@ -28,17 +28,17 @@
 			<h2>Class Roster 2017-2018</h2>
 			<table>
 				<tr>
-					<td>ID#</td>
-					<td>Student Name</td>
-					<td>Grade</td>
-                                        <td>Email</td>
-                                        <td>Parent</td>
+					<th>ID#</th>
+					<th>Student Name</th>
+					<th>Grade</th>
+                    <th>Email</th>
+                    <th>Parent</th>
 				</tr>
 				<tr>
 					<td>123</td>
 					<td>Johnny Depp</td>
 					<td>A</td>
-                                        <td>johnny@ucsd.edu</td>
+                    <td>johnny@ucsd.edu</td>
 					<td>Robert Smith</td>
 				</tr>
 				<tr>
@@ -46,7 +46,7 @@
 					<td>Brad Pitt</td>
 					<td>A-</td>
 					<td>brad@ucsd.edu</td> 
-                                        <td>Poo Bear</td>
+                    <td>Poo Bear</td>
 				</tr>
 				<tr>
 					<td>345</td>
@@ -55,35 +55,31 @@
 					<td>kate@ucsd.edu</td>
                                         <td>Veronica Mars</td>
 				</tr>
-                                <tr>
-                                        <td>456</td>
-                                        <td>Kevin Bacon</td>
-                                        <td>C</td>
-                                        <td>kevin@ucsd.edu</td>
-                                        <td>Kevin Bacon Sr</td>
-                                </tr>
-                                <tr>
-                                        <td>567</td>
-                                        <td> Mary Kay</td>
-                                        <td>A</td>
-                                        <td>may@ucsd.edu</td>
-                                        <td>Vera Randall</td>
-                                </tr>
-                                <tr>
-                                        <td>555</td>
-                                        <td>Carlos Solis</td>
-                                        <td>A</td>
-                                        <td>carlos@ucsd.edu</td>
-                                        <td>Maria Solis</td>
-                                </tr>
-                                <tr>
-                                        <td>543</td>
-                                        <td>Danielle Blind</td>
-                                        <td>B-</td>
-                                        <td>danielle@ucsd.edu</td>
-                                        <td>Victor Blind</td>
-                                </tr>
+                <tr>
+                    <td>456</td>
+                    <td>Kevin Bacon</td>
+                    <td>C</td>
+                    <td>kevin@ucsd.edu</td>
+                    <td>Kevin Bacon Sr</td>
+                </tr>
+                <tr>
+                    <td>567</td>
+                    <td> Mary Kay</td>
+                    <td>A</td>
+                    <td>may@ucsd.edu</td>
+                    <td>Vera Randall</td>
+                </tr>
 			</table>
+			<br /><br />
+			<p><b>Add a new student to the roster:</b></p><br />
+			<div class="inside-message-container">
+			   ID: <input type="text" name="aID" id="aID" /><br/>
+			   Name: <input type="text" name="aName" id="aName" /><br/>
+			   Grade: <input type="text" name="aGrade" id="aGrade" /><br />
+			   Email: <input type="email" name="aEmail" id="aEmail" /><br />
+			   Parent: <input type="text" name="aParent" id="aParent" /><br />
+			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+		    </div>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
@@ -92,7 +88,36 @@
 		  $('.menu').click(function() {
 		    $('ul').toggleClass('active');	
 		  })
-        })
+        });
+
+        function addRow() {
+        	var aID = document.getElementById('aID').value;
+        	var aName = document.getElementById('aName').value;
+        	var aGrade = document.getElementById('aGrade').value;
+        	var aEmail = document.getElementById('aEmail').value;
+        	var aParent = document.getElementById('aParent').value;
+
+        	var table = document.getElementsByTagName('table')[0];
+
+        	if (aID=="" || aName=="" || aGrade=="" || aEmail=="" || aParent=="") {
+              alert("Please Fill All Required Fields");
+              return false;
+            }
+
+        	var newRow = table.insertRow(table.rows.length);
+
+        	var cell1 = newRow.insertCell(0);
+        	var cell2 = newRow.insertCell(1);
+        	var cell3 = newRow.insertCell(2);
+        	var cell4 = newRow.insertCell(3);
+        	var cell5 = newRow.insertCell(4);
+
+        	cell1.innerHTML = aID;
+        	cell2.innerHTML = aName;
+        	cell3.innerHTML = aGrade;
+        	cell4.innerHTML = aEmail;
+        	cell5.innerHTML = aParent;
+        }
 	</script>
 </body>
 
