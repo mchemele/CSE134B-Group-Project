@@ -30,9 +30,11 @@
 			   Date:    <input type="date" name="aDate" id="aDate" placeholder="Insert date" /><br/>
 			   Concept: <input type="text" name="aConcept" id="aConcept" placeholder="Type concept here"/><br/>
 			   File:    <input type="file" name="attach" id="aFile" placeholder="Attach a file" /><br />
-			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+			   <button onclick="addRow();"><b>SUBMIT</b></button>
+			   <button onclick="editHtmlTableSelectedRow();"><b>EDIT</b></button>
+			   <button onclick="removeSelectedRow();"><b>DELETE</b></button><br/><br />
 		    </div>
-            <table>
+            <table id="table">
 				<tr>
 					<th>Date</th>
 					<th>Concept</th>
@@ -56,36 +58,7 @@
 			</table>
 		</div>
 	</div>
-	<script type="text/javascript">
-        $(document).ready(function() {
-		  $('.menu').click(function() {
-		    $('ul').toggleClass('active');	
-		  })
-        });
-
-        function addRow() {
-        	var aDate = document.getElementById('aDate').value;
-        	var aConcept = document.getElementById('aConcept').value;
-        	var aFile = document.getElementById('aFile').value;
-
-        	var table = document.getElementsByTagName('table')[0];
-
-        	if (aDate=="" || aConcept=="" || aFile=="") {
-              alert("Please Fill All Required Fields");
-              return false;
-            }
-
-        	var newRow = table.insertRow(1);
-
-        	var cell1 = newRow.insertCell(0);
-        	var cell2 = newRow.insertCell(1);
-        	var cell3 = newRow.insertCell(2);
-
-        	cell1.innerHTML = aDate;
-        	cell2.innerHTML = aConcept;
-        	cell3.innerHTML = aFile;
-        }
-	</script>
+	<script src="teacher_assignment.js"></script>
 </body>
 
 </html>

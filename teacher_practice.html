@@ -10,7 +10,6 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>iMPROVE!</title>
 </head>
-
 <body>
 	<nav>
 		 <a href="index.html"><span class="logo">iMPROVE!</span></a>
@@ -30,9 +29,11 @@
             <div class="inside-message-container">
                Worksheet: <input type="text" name="aWorksheet" id="aWorksheet" /><br />
 			   Concept: <input type="text" name="aConcept" id="aConcept" /><br/>
-			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+			   <button onclick="addRow();"><b>SUBMIT</b></button>
+			   <button onclick="editHtmlTableSelectedRow();"><b>EDIT</b></button>
+			   <button onclick="removeSelectedRow();"><b>DELETE</b></button><br/><br />
 		    </div>
-            <table>
+            <table id="table">
 				<tr>
 					<th>Worksheet</th>
 					<th>Concept</th>
@@ -56,33 +57,7 @@
 			</table>
 		</div>
 	</div>
-	<script type="text/javascript">
-        $(document).ready(function() {
-		  $('.menu').click(function() {
-		    $('ul').toggleClass('active');	
-		  })
-        });
-
-         function addRow() {
-        	var aConcept = document.getElementById('aConcept').value;
-        	var aWorksheet = document.getElementById('aWorksheet').value;
-
-        	var table = document.getElementsByTagName('table')[0];
-
-        	if (aConcept=="" || aWorksheet=="") {
-              alert("Please Fill All Required Fields");
-              return false;
-            }
-
-        	var newRow = table.insertRow(1);
-
-        	var cell1 = newRow.insertCell(0);
-        	var cell2 = newRow.insertCell(1);
-
-        	cell1.innerHTML = aWorksheet;
-        	cell2.innerHTML = aConcept;
-        }
+	<script src="teacher_practice.js">
 	</script>
 </body>
-
 </html>

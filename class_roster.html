@@ -6,10 +6,9 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<script src="login.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>iMPROVE!</title>
 </head>
-
 <body>
 	<nav>
 		<a href="index.html"><span class="logo">iMPROVE!</span></a>
@@ -26,7 +25,7 @@
 	<div id="container">
 		<div class="message-container">
 			<h2>Class Roster 2017-2018</h2>
-			<table>
+			<table id="table">
 				<tr>
 					<th>ID#</th>
 					<th>Student Name</th>
@@ -53,7 +52,7 @@
 					<td>Kate Winslet</td>
 					<td>B+</td>
 					<td>kate@ucsd.edu</td>
-                                        <td>Veronica Mars</td>
+                    <td>Veronica Mars</td>
 				</tr>
                 <tr>
                     <td>456</td>
@@ -78,47 +77,12 @@
 			   Grade: <input type="text" name="aGrade" id="aGrade" /><br />
 			   Email: <input type="email" name="aEmail" id="aEmail" /><br />
 			   Parent: <input type="text" name="aParent" id="aParent" /><br />
-			   <button onclick="addRow();"><b>SUBMIT</b></button><br/><br />
+			   <button onclick="addRow();"><b>SUBMIT</b></button>
+			   <button onclick="editHtmlTableSelectedRow();"><b>EDIT</b></button>
+			   <button onclick="removeSelectedRow();"><b>DELETE</b></button><br/><br />
 		    </div>
 		</div>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
-	<script type="text/javascript">
-        $(document).ready(function() {
-		  $('.menu').click(function() {
-		    $('ul').toggleClass('active');	
-		  })
-        });
-
-        function addRow() {
-        	var aID = document.getElementById('aID').value;
-        	var aName = document.getElementById('aName').value;
-        	var aGrade = document.getElementById('aGrade').value;
-        	var aEmail = document.getElementById('aEmail').value;
-        	var aParent = document.getElementById('aParent').value;
-
-        	var table = document.getElementsByTagName('table')[0];
-
-        	if (aID=="" || aName=="" || aGrade=="" || aEmail=="" || aParent=="") {
-              alert("Please Fill All Required Fields");
-              return false;
-            }
-
-        	var newRow = table.insertRow(table.rows.length);
-
-        	var cell1 = newRow.insertCell(0);
-        	var cell2 = newRow.insertCell(1);
-        	var cell3 = newRow.insertCell(2);
-        	var cell4 = newRow.insertCell(3);
-        	var cell5 = newRow.insertCell(4);
-
-        	cell1.innerHTML = aID;
-        	cell2.innerHTML = aName;
-        	cell3.innerHTML = aGrade;
-        	cell4.innerHTML = aEmail;
-        	cell5.innerHTML = aParent;
-        }
-	</script>
+    <script src="class_roster.js"></script>
 </body>
-
 </html>
