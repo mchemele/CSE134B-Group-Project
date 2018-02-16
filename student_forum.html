@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<script src="login.js"></script>
+	<script src="student_forum.js"></script>
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 	<title>iMPROVE!</title>
 </head>
@@ -27,7 +27,10 @@
    <div class="chat-container">
       <form> 
          <div>
-	   <button><b>NEW TOPIC</b></button>
+	   <button type="button" onclick="addNewTopic()"> 
+		   <b>NEW TOPIC</b>
+	   </button>
+	   <div id="inputForm"></div>
 	   <input type="search" id="mySearch" name="q" placeholder="Search this forum">
 	   <button>Search</button><br/><br/>
 	  </div>
@@ -55,7 +58,7 @@
 				 </td>
 			       </tr>
 		       </table><br >
-			<table>
+			<table id="topicsTable">
 				<tr><td class="left">TOPICS</td>
 					<td class="right">REPLIES&nbsp;&nbsp;&nbsp;</td>
 					<td class="right">VIEWS&nbsp;&nbsp;&nbsp;</td>
@@ -121,7 +124,7 @@
 						<h1>on Sat Feb 19, 2017 6:51pm</h1>
 				 </td>
 			       </tr>
-			               <tr><td class="inside-left">
+			    <tr><td class="inside-left">
 						<b>IS ANYONE ELSE LOST OR JUST ME?!</b> <br />
 						<h1>by Cameron Diaz on Wed Jan 03, 2017 5:39pm</h1>
 				 </td>
@@ -135,8 +138,10 @@
 					 <h1>By Reenee K.</h1>
 						<h1>on Sat Feb 19, 2017 6:51pm</h1>
 				 </td>
-			       </tr>
+				   </tr>
 			</table>
+			<div id="newCell"></div>
+
 		</div>
 		</div>
 	</div>
