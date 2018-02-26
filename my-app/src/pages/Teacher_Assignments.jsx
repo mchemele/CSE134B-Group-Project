@@ -24,7 +24,7 @@ class Teacher_Assignments extends Component {
         message: 'This item is already on the list.'
       })
     } else {
-   newItem != '' && this.setState( {
+   newItem !== '' && this.setState( {
       buyItems: [newItem,...this.state.buyItems]
     })
   }

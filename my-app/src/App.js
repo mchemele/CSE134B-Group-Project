@@ -19,12 +19,15 @@ import Teacher_Forum from './pages/Teacher_Forum.jsx'
 import Teacher_Contact from './pages/Teacher_Contact.jsx'
 import Teacher_Practice from './pages/Teacher_Practice.jsx'
 import Parent_Home from './pages/Parent_Home.jsx'
+import IndexNav from './components/IndexNav.jsx'
 
 class App extends Component {
   render() {
     return (
+      
       <Router>
         <div className="App">
+          <Route exact path='/' component={Login}/>
           <Route exact path="/index" component={index}/>
           <Route exact path="/student_home" component={Student_Home}/>
           <Route exact path="/student_practice" component={Student_Practice}/>

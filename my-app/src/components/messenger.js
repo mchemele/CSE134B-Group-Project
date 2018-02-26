@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import '../css/app.css'
 import avatar from '../images/avatar.png'
 import classNames from 'classnames'
-import Store from '../components/store.js'
+// import Store from '../components/store.js'
 import {ObjectID} from '../helpers/objectid.js'
 import _ from 'lodash'
 
@@ -93,11 +93,11 @@ class Messenger extends Component {
                      <button>New Message</button>
                   </div>
                </div>
-               <div className="middle"><h1></h1></div>
+               {/* <div className="middle"><h1></h1></div> */}
                <div className="right">
                   <div className="user-bar">
                      <div className="profile-name">Johnny Depp</div>
-                     <div className="profile-image"><img src={avatar} /></div>
+                     <div className="profile-image"><img src={avatar} alt='avatar'/></div>
                   </div>
                </div>
             </div>
@@ -106,27 +106,27 @@ class Messenger extends Component {
                    <div className="channels">
                       <div className="channel">
                          <div className="channel-user-image">
-                            <img src={avatar} />Johnny Depp
+                            <img src={avatar} alt='avatar'/>Johnny Depp
                          </div>
                       </div>
                       <div className="channel">
                          <div className="channel-user-image">
-                            <img src={avatar} />Cameron Diaz
+                            <img src={avatar} alt='avatar'/>Cameron Diaz
                          </div>
                       </div>
                       <div className="channel">
                          <div className="channel-user-image">
-                            <img src={avatar} />Brad Pitt
+                            <img src={avatar} alt='avatar'/>Brad Pitt
                          </div>
                       </div>
                       <div className="channel">
                          <div className="channel-user-image">
-                            <img src={avatar} />Kate Winslet
+                            <img src={avatar} alt='avatar'/>Kate Winslet
                          </div>
                       </div>
                       <div className="channel">
                          <div className="channel-user-image">
-                            <img src={avatar} />Natalie Portman
+                            <img src={avatar} alt='avatar'/>Natalie Portman
                          </div>
                       </div>
                    </div>
@@ -137,7 +137,7 @@ class Messenger extends Component {
                         return (
                            <div key={index} className={classNames('message', {'me': message.me})}>
                               <div className="message-user-image">
-                                 <img src={avatar} />
+                                 <img src={avatar} alt='avatar'/>
                               </div>
                               <div className="message-body">
                                  <div className="message-author">{message.me ? 'You ' : message.author}:</div>
@@ -170,12 +170,12 @@ class Messenger extends Component {
                   <div className="members">
                      <div className="member">
                          <div className="member-user-image">
-                            <img src={avatar} />Cameron Diaz <p>Joined: 2 days ago.</p>
+                            <img src={avatar} alt='avatar'/>Cameron Diaz <p>Joined: 2 days ago.</p>
                          </div>
                      </div>
                      <div className="member">
                          <div className="member-user-image">
-                            <img src={avatar} />Johnny Depp <p> is currently active.</p>
+                            <img src={avatar} alt='avatar'/>Johnny Depp <p> is currently active.</p>
                          </div>
                      </div>
                   </div>

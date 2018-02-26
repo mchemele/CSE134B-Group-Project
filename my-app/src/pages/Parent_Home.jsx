@@ -10,7 +10,7 @@ class Parent_Home extends Component {
          <div className="container">
             <h2>Hello, Johnny Depps Mother!</h2>
             <p>Here is your childs current progress:</p>
-            <img src={bar} />
+            <img src={bar} alt='progress bar'/>
             </div>
         </div>
    );

@@ -10,7 +10,7 @@ class Student_Home extends Component {
          <div className="container">
             <h2>Hello, Johnny Depp!</h2>
             <p>Here is your current progress:</p>
-            <img src={bar} />
+            <img src={bar} alt='progress bar'/>
             </div>
         </div>
    );
