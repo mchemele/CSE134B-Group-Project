@@ -1,0 +1,10 @@
+.navbar {
+background-color: gray;
+color: white;
+}
+
+a {
+  color: white;
+  font-weight: 300px;
+  font-size: 20px;
+}
