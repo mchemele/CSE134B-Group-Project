@@ -14,7 +14,7 @@ class Navbar_teacher extends Component {
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item active">
-            <Link className="nav-link" to="/roster">CLASS ROSTER <span class="sr-only">(current)</span></Link>
+            <Link className="nav-link" to="/roster">CLASS ROSTER <span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/teacher_assignments">ASSIGNMENTS</Link>

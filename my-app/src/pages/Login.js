@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import Navigation from '../components/IndexNav.jsx';
 import {Link} from 'react-router-dom';
+import { Button } from 'reactstrap';
+
 class Login extends Component {
     handleSignIn(e) {
         e.preventDefault()
@@ -11,8 +13,9 @@ class Login extends Component {
       }
   render() {
     return (
+        <div>
+
         <div className="container">
-            
             <form onSubmit={this.handleSignIn.bind(this)}>
                 <h3>Sign in</h3>
                 <input type="text" ref="username" placeholder="enter you username" />
@@ -22,6 +25,7 @@ class Login extends Component {
                 </Link>
                 
             </form>
+        </div>
         </div>
        
    );
