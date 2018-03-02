@@ -7,7 +7,7 @@ class index extends Component {
        <div>
          <Navigation />
          <div className="container">
-            <h2>click on tab to enter Student, Parent or Teacher page</h2>
+            <h2 id="info">click on tab to enter Student, Parent or Teacher page</h2>
             </div>
         </div>
    );

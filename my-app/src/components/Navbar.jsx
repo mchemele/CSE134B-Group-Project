@@ -17,19 +17,19 @@ class Navbar extends Component {
             <Link className="nav-link" to="/student_home">HOME <span class="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_practice">PRACTICE</Link>
+            <Link className="nav-link" to="/student_practice" id="practice">PRACTICE</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_assignments">ASSIGNMENTS</Link>
+            <Link className="nav-link" to="/student_assignments" id="assignments">ASSIGNMENTS</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_forum">FORUM</Link>
+            <Link className="nav-link" to="/student_forum" id="forum">FORUM</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_contact">CONTACT</Link>
+            <Link className="nav-link" to="/student_contact" id="contact">CONTACT</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_grades">GRADES</Link>
+            <Link className="nav-link" to="/student_grades" id="grades">GRADES</Link>
           </li>
         </ul>
       </div>

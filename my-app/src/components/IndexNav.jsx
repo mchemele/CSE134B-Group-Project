@@ -15,13 +15,13 @@ class IndexNav extends Component {
             <Link className="nav-link" to="/">iMPROVE! <span class="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/student_home"> >>>STUDENT</Link>
+            <Link className="nav-link" to="/student_home" id="student"> >>>STUDENT</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/parent_home"> >>>PARENT</Link>
+            <Link className="nav-link" to="/parent_home" id="parent"> >>>PARENT</Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/roster"> >>>TEACHER</Link>
+            <Link className="nav-link" to="/roster" id="teacher"> >>>TEACHER</Link>
           </li>
         </ul>
       </div>
