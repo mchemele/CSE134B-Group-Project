@@ -1,6 +1,13 @@
 import React, {Component } from 'react';
 import Navbar from '../components/Navbar_teacher.jsx';
 
+import Header from "../components/header/index0.js";
+import TaskBar from "../components/taskbar/";
+import TaskList from "../components/tasklist/";
+
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
 
 class Teacher_Practice extends Component {
 
@@ -47,8 +54,11 @@ class Teacher_Practice extends Component {
     return (
        <div>
          <Navbar />
+         <Header />
+         <TaskBar />
+         <TaskList />
          <div className="container">
-            <h2>Extra Practice</h2>
+            <h2>Extra Practice (using React)</h2>
             <form ref={input => this.addForm = input} className="form-inline" onSubmit={(e) => {this.addItem(e)}}>
               <div className="form-group">
                 <label className="sr-only" htmlFor="newItemInput">Add New Item</label>
