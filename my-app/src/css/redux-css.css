@@ -1,0 +1,55 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600";
+
+#assign {
+  padding: 80px 0px 5px 380px;
+}
+
+#inside-header, #inside-body {
+  width: 50%;
+  margin: 5px 380px;
+  height: 70px;
+  padding: 0 0 130px 0;
+}
+
+#inside-header {
+  width: 100%;
+  padding: 20px 20px;
+}
+
+#inside-header p {
+  /*background-color: red;*/
+  padding: 20px 270px 10px 0px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#blah, #blah2{
+  /*background-color: orange;*/
+  width: 77%;
+  padding: 10px 10px;
+  border: 1px solid lightgray;
+}
+
+#two {
+/*  background-color: green;*/
+  width: 30%;
+  margin: 20px 380px;
+  height: 30px;
+}
+
+#add-text {
+  padding: 10px 10px;
+  width: 40%;
+  font-family: Open Sans, serif;
+  border-radius: 5px;
+  border-color: lightgray;
+}
+
+#add-button {
+  padding: 10px 10px;
+  margin: 0px 0px 10px 0px;
+  background-color: blue;
+  color: white;
+  width: 15%;
+  font-family: Open Sans, serif;
+}

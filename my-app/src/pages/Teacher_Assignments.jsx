@@ -1,6 +1,13 @@
 import React, {Component } from 'react';
 import Navbar from '../components/Navbar_teacher.jsx';
 
+import Header from "../components/header/";
+import TaskBar from "../components/taskbar/";
+import TaskList from "../components/tasklist/";
+
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+
 class Teacher_Assignments extends Component {
 
   constructor(props) {
@@ -42,12 +49,23 @@ class Teacher_Assignments extends Component {
   }
 
   render() {
+
     const {buyItems, message} = this.state;
     return (
        <div>
          <Navbar />
+
+
+
+           <Header />
+           <TaskBar />
+           <TaskList />
+
+
+
+
          <div className="container">
-            <h2>Assignments</h2>
+            <h2>Assignments (using React)</h2>
             <form ref={input => this.addForm = input} className="form-inline" onSubmit={(e) => {this.addItem(e)}}>
               <div className="form-group">
                 <label className="sr-only" htmlFor="newItemInput">Add New Item</label>

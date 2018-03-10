@@ -24,7 +24,6 @@ import IndexNav from './components/IndexNav.jsx'
 class App extends Component {
   render() {
     return (
-      
       <Router>
         <div className="App">
           <Route exact path='/' component={Login}/>

@@ -1,6 +1,7 @@
 import React, {Component } from 'react';
 import Navbar from '../components/Navbar_teacher.jsx';
 
+
 class Teacher_Practice extends Component {
 
   constructor(props) {

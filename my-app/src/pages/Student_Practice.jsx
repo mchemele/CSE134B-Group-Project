@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import Navbar from '../components/Navbar.jsx';
 
+import { createStore } from 'redux';
+
 class Student_Practice extends Component {
     render() {
       return (
