@@ -10,7 +10,7 @@ class Navbar_parent extends Component {
         <span className="navbar-toggler-icon"></span>
       </button>
       <div className="container">
-      <Link className="nav-link" to="/index">iMPROVE!</Link>
+      <Link className="nav-link" to="/">iMPROVE!</Link>
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">

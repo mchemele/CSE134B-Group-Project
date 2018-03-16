@@ -1,5 +1,7 @@
 import React, {Component } from 'react';
 import Navbar from '../components/Navbar_teacher.jsx';
+import * as studentActions from '../actions/studentActions';
+
 
 class Teacher_Gradebook extends Component {
   render() {

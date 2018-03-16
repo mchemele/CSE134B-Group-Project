@@ -12,7 +12,7 @@ class IndexNav extends Component {
       <div className="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul className="navbar-nav mr-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/">iMPROVE! <span class="sr-only">(current)</span></Link>
+            <Link className="nav-link" to="/">iMPROVE! <span className="sr-only">(current)</span></Link>
           </li>
           <li className="nav-item">
             <Link className="nav-link" to="/student_home" id="student"> >>>STUDENT</Link>
